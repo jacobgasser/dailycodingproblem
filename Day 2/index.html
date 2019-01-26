@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Day 2</title>
+</head>
+
+<body style="height: 100vh;">
+
+
+    <div id="result"></div>
+
+
+    <script>
+        const array = [3, 2, 1];
+        document.querySelector("#result").innerHTML = meatAndPotatoes(array);
+        function meatAndPotatoes(arr) {
+            var newArr = [];
+            for (var i = 0; i < arr.length; i++) {
+                var num = 1;
+                for (var i2 = 0; i2 < arr.length; i2++) {
+                    if (i2 == i) {
+                        continue;
+                    }
+                    num = num * arr[i2];
+                }
+                newArr[i] = num;
+            }
+            return newArr;
+        }
+
+    </script>
+</body>
+
+</html>
